@@ -146,6 +146,7 @@ button[disabled] {
   position: absolute;
   z-index: 1;
   font-size: 8px;
+  margin-left: 10px;
 }
 
 .tip .tiptext::after {
@@ -208,6 +209,7 @@ button[disabled] {
   button[disabled] {
     cursor: default;
     background: #c0c7cf;
+    font-style: italic;
   }
 
   #password {
