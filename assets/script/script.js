@@ -18,11 +18,11 @@ function writePassword() {
   // use const for error messages as they are not changing
   const optionsError1 =
     "You selected a password length of " +
-    length +
+    passLen +
     ".  Passwords must be between 8 and 128 characters.  Additionally, You must select at least one type of character (Upper Case, Lower Case, Numeric, Special) to include.";
   const optionsError2 =
     "You selected a password length of " +
-    length +
+    passLen +
     ".  Passwords must be between 8 and 128 characters.";
   const optionsError3 =
     "You must select at least one type of character (Upper Case, Lower Case, Numeric, Special) to include.";
