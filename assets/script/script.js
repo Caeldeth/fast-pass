@@ -1,6 +1,4 @@
-// Assignment code here
-
-// initialize variables for password generation
+// initialize global variables for password generation - they aren't changing so use const
 const letters = "abcdefghijklmnopqrstuvwxyz";
 const nums = "1234567890";
 const special = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~\"\\";
@@ -39,6 +37,7 @@ function writePassword() {
       ? "valid"
       : "invalid";
 
+  // add console output to validate variables are behaving appropriately
   console.log("Value of lowercase is: " + incLower);
   console.log("Value of uppercase is: " + incUpper);
   console.log("Value of special char is: " + incSpecial);
@@ -47,6 +46,8 @@ function writePassword() {
   console.log("lenValue is: " + lenValue);
   console.log("checkBoxSum is: " + checkBoxSum);
 
+  // use if/then statement to validate possible failure cases.  on success, pass to password generator function.  On failure, yell at user to read 
+  // the instructions and HELPFUL TOOLTIPS.  Log result to console to verify correct error message is firing
   if (lenValue === "invalid" && checkBoxSum === "invalid") {
     console.log("Error1 was called");
     window.alert(optionsError1);
@@ -57,13 +58,16 @@ function writePassword() {
     console.log("Error3 was called");
     window.alert(optionsError3);
   } else {
+    // build data set for password characters
     var passChars = "";
     incLower ? (passChars += letters) : "";
     incUpper ? (passChars += letters.toUpperCase()) : "";
     incSpecial ? (passChars += special) : "";
     incNumber ? (passChars += nums) : "";
     
+    // pass created letter set and captured password length to generator function
     var password = generatePassword(passChars, passLen);
+    // add password to output html
     var passwordText = document.querySelector("#password");
 
     passwordText.value = password;
@@ -71,15 +75,22 @@ function writePassword() {
 }
 
 function generatePassword(passChars, passLen) {
+  //small celebrations are great - it worked
   console.log("Success was called");
+  //validate the character data set
   console.log("Characters are " + passChars);
+  //validate the desired length is passed correctly
   console.log("Passed Length is? " + passLen);
 
+  //simple for loop to generate password.  Note that a typo of "+-"" is not the same as "+="", causing an hour of headaches
   let password = "";
+  //for loop is slightly modified from https://w3collective.com/random-password-generator-javascript/ .  If it's not broke, don't fix it
   for (let i = 0; i < passLen; i++) {
     password += passChars.charAt(Math.floor(Math.random() * passChars.length));
   }
+  //validate password is actually building (see above headache on +-)
   console.log("Password is " + password);
+  //send password back to main function to 
   return password;
 }
 
