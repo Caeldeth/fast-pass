@@ -182,7 +182,7 @@ button[disabled] {
   }
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   body {
     background-color: #28292b;
   }
@@ -216,4 +216,4 @@ button[disabled] {
     background:hsl(206, 24%, 66%);
   }
 
-} */
+}
