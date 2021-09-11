@@ -1,34 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
-        </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
-      </div>
-    </div>
-    <script src=".assets/script/script.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Password Generator</h1>
+    </header>
+    <main class="card">
+      <section class="card-header">
+        <h2>Generate a Password</h2>
+      </section>
+      <section class="card-body">
+        <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
+      </section>
+      <section class="card-footer">
+        <button id="generate" class="btn">Generate Password</button>
+      </section>
+      <h3 class="card-header">Password Options</h3>
+      <article class="pw-options">
+        <section class="options-row">
+          <label id="char-num" class="label">Password Length? (Between 8-128)</label>
+          <aside class="tip" id="tooltip">
+            <input type="number" min="8" max="128" value="8" id="char-len" class="input" />
+            <span class="tiptext">Length can be any value between 8 and 128</span>
+          </aside>
+        </section>
+        <section class="options-row">
+          <label id="char-upper" class="label">Include Uppercase?</label>
+          <aside class="tip" id="tooltip">
+            <input type="checkbox" id="upper" class="checkbox" />
+            <span class="tiptext">Check to include uppercase characters</span>
+          </aside>
+        </section>
+        <section class="options-row">
+          <label id="char-lower" class="label">Include Lowercase?</label>
+          <aside class="tip" id="tooltip">
+            <input type="checkbox" id="lower" class="checkbox" checked />
+            <span class="tiptext">Check to include lowercase characters</span>
+          </aside>
+        </section>
+        <section class="options-row">
+          <label id="char-numeric" class="label">Include Numbers?</label>
+          <aside class="tip" id="tooltip">
+            <input type="checkbox" id="lower" class="checkbox" checked />
+            <span class="tiptext">Check to include numeric characters</span>
+          </aside>
+        </section>
+        <section class="options-row">
+          <label id="char-special" class="label">Include Special Characters?</label>
+          <aside class="tip" id="tooltip">
+            <input type="checkbox" id="lower" class="checkbox" />
+            <span class="tiptext">Check to include special characters</span>
+          </aside>
+        </section>
+      </article>
+    </main>
+  </div>
+  <script src=".assets/script/script.js"></script>
+</body>
+
 </html>
+ 

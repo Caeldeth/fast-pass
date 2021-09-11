@@ -1,5 +1,9 @@
 // Assignment code here
-
+function makePass() {
+  var letters = "abcdefghijklmnopqrstuvwxyz";
+  var nums = "1234567890";
+  var special = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~\"\\";
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
